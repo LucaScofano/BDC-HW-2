@@ -10,16 +10,19 @@ The assignment is based on finding the best clustering technique that provides t
 
 ## Data Pre-processing
 
-In section **1.1 Create Dataset** the only thing to change in order to use it on your personal computer is the path where the input data `corpus.txt` and `labels.txt` in stored.
+In section **1.1 Create Dataset** the only thing to change in order to use it on your personal computer is the path where the input data `corpus.txt` and `labels.txt` is stored. Since I used Google Colab, I mounted my own Google Drive and used that as a directory.
 
 Since the preprocessing would take a while to run, section **1.2 Preprocessing** can be skipped by using a cleaned version of the corpus, the file is called `clean_corpus.txt`  
 
-## Usage
+## Clustering
+
+This section is divided mainly into three subsections.
+
+The **first** one involves *K-means ++ using as samples random projections* of the original data. All of the Grid-Search is contained in a single function
 
 ```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
+def grid_k_means_random(components, n_it, data):
 ```
+The parameters that can be set are:
+* components: number of random projected samples
+* n_it: number of iterations of k-means ++
