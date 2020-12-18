@@ -24,5 +24,16 @@ The **first** one involves *K-means ++ using as samples random projections* of t
 def grid_k_means_random(components, n_it, data):
 ```
 The parameters that can be set are:
-* components: number of random projected samples
+* components: a list of random projected samples size
 * n_it: number of iterations of k-means ++
+* data: original data vectorized
+
+The **second** one involves *mini-batches K-means ++*. All of the Grid-Search is contained in a single function
+
+```python
+def grid_k_means_mini_random(batch, n_it, data): 
+```
+The parameters that can be set are:
+* batch: a list containing different batch sizes
+* n_it: number of iterations of k-means ++
+* data: original data vectorized
