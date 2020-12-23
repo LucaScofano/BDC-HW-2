@@ -6,19 +6,19 @@ The assignment is based on finding the best clustering technique that provides t
 
 * README.pdf
 * HW2.ipynb 
-* clean_corpus.txt
+* clean_sampled.txt
 
 ## Data Pre-processing
 
 In section **1.1 Create Dataset** the only thing to change in order to use it on your personal computer is the path where the input data `corpus.txt` and `labels.txt` is stored. Since I used Google Colab, I mounted my own Google Drive and used that as a directory.
 
-Since the preprocessing would take a while to run, section **1.2 Preprocessing** can be skipped by using a cleaned version of the corpus, the file is called `clean_corpus.txt`  
+Since the preprocessing would take a while to run, section **1.2 Preprocessing** can be skipped by using a cleaned version of the corpus, the file is called `clean_sampled.txt`  
 
 ## Clustering
 
 This section is divided mainly into three subsections.
 
-The **first** one involves *K-means ++ using as samples random projections* of the original data. All of the Grid-Search is contained in a single function
+The **first** one involves *K-means ++ using as samples random projections* of the original data. The first two methods use Grid-Search in order to obtain the best combination.
 
 ```python
 def grid_k_means_random(components, n_it, data):
@@ -37,3 +37,5 @@ The parameters that can be set are:
 * batch: a list containing different batch sizes
 * n_it: number of iterations of k-means ++
 * data: original data vectorized
+
+For the **third** sub-section, grid-search wasn't necessary since very good results are obtained with the default values. 
