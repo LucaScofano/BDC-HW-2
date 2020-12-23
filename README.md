@@ -6,7 +6,7 @@ The assignment is based on finding the best clustering technique that provides t
 
 * README.pdf
 * HW2.ipynb 
-* clean_sampled.txt
+* clean_sample.txt
 
 ## Data Pre-processing
 
